@@ -13,7 +13,18 @@ class Board extends React.Component {
 
   render() {
     return (
-      <Grid sx={{ marginLeft: 28, minWidth: 200, paddingTop: 10 }}>
+      <Grid
+        container
+        spacing={0}
+        alignItems="center"
+        justifyContent="center"
+        sx={{
+          marginBottom: 10,
+          textAlign: "center",
+          alignItems: "center",
+          justfy: "center",
+        }}
+      >
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}

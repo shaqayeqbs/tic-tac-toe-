@@ -8,7 +8,7 @@ import Container from "@mui/material/Container";
 import { pink } from "@mui/material/colors";
 import CardContent from "@mui/material/CardContent";
 import GameIcon from "@mui/icons-material/SportsEsports";
-import Grid from "@mui/material/Grid";
+
 class Game extends React.Component {
   constructor(props) {
     super(props);
@@ -85,6 +85,14 @@ class Game extends React.Component {
       justifyContent: "center",
       padding: 30,
     }));
+    const MyDiv = styled("div")(({ theme }) => ({
+      ...theme.CardContent,
+
+      textAlign: "center",
+
+      margin: 40,
+      padding: 30,
+    }));
 
     const card = (
       <React.Fragment>
@@ -104,12 +112,14 @@ class Game extends React.Component {
     );
 
     return (
-      <Container maxWidth="md" sx={{ minWidth: 275 }}>
+      <Container maxWidth="md" sx={{ justifyContent: "center" }}>
         <Div>
           <GameIcon sx={{ color: pink[200], fontSize: 50, paddingRight: 3 }} />
           <div>Tic Tac Toe</div>
         </Div>
-        <Card variant="outlined">{card}</Card>
+        <Card variant="outlined">
+          <MyDiv>{card}</MyDiv>
+        </Card>
       </Container>
     );
   }

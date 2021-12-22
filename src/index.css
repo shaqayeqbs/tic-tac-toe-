@@ -1,6 +1,6 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 10rem;
+  margin: 5rem;
   background: rgb(235, 165, 200);
 }
 
@@ -44,9 +44,14 @@ ul {
   font-weight: 600;
   line-height: 34px;
   height: 8rem;
-  margin-right: -1px;
-  margin-top: -1px;
   padding: 0;
   text-align: center;
   width: 8rem;
+  font-size: inherit;
+}
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    margin-top: 5rem;
+  }
 }
